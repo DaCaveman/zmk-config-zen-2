@@ -19,13 +19,13 @@
 };
 
 / {
-    //conditional_layers {
-    //    compatible = "zmk,conditional-layers";
-    //    tri_layer {
-    //        if-layers = <1 2>;
-    //        then-layer = <3>;
-    //    };
-    //};
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
 
     behaviors {
         td0: td0 {
@@ -34,13 +34,13 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
-        td1: td1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD1";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&kp DQT>, <&kp GRAVE>;
-        };
+        //td1: td1 {
+        //    compatible = "zmk,behavior-tap-dance";
+        //    label = "TD1";
+        //    #binding-cells = <0>;
+        //    tapping-term-ms = <300>;
+        //    bindings = <&kp DQT>, <&kp GRAVE>;
+        //};
     };
 
     keymap {
