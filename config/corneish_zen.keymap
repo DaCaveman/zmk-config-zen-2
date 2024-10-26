@@ -9,6 +9,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <keys_de.h>
+
 
 / {
   chosen {
@@ -84,15 +86,15 @@
       display-name = "SYMBOL";
 
       // -----------------------------------------------------------------------------------------
-      // |  ESC |  !  |  " ' |  #  |  % |  &  |   |  "|"  |  [  |  ]  |  /  |  \  |  |
-      // | TAB |  ^  |  @  |   §  |  *  |   $  |   |  = |  (  |  )  |  ]  |    |  ?  |
-      // | CRTL |   <  |   >  |     |  +  |  -  |   |  _  |  {  |  }  |    |  |  ~   |
+      // |  ESC |  !  |  "' |  #  |  % |  &  |   |  -"|"  |  -[  |  -]  |  /  |  -\  |  |
+      // | TAB |  ^  |  -@  |   §  |  *  |   $  |   |  = |  (  |  )  |    |    |  -?  |
+      // | CRTL |   <  |   >  |     |  +  |  -  |   |  _  |  {  |  }  |    | ° |  -~   |
       //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
 
       bindings = <
         &trans  &kp EXCL     &td1    &kp BSLH  &kp PRCNT  &kp CARET    &kp PIPE   &kp LBKT  &kp RBKT  &kp AMPS  &kp BSLH &kp DLLR
-        &trans  &kp GRAVE    &kp AT  &kp HASH     &kp RPAR  &kp DLLR    &kp RPAR  &kp STAR  &kp LPAR  &none     &none    &kp EQUAL
-        &trans  &kp NUBS     &kp PIPE2   &none     &kp RBKT   &kp FSLH   &kp QMARK   &kp LBRC &kp RBRC  &none     &none    &kp TILDE
+        &trans  &kp GRAVE    &kp DE_AT  &kp HASH     &kp RBRC  &kp DLLR    &kp RPAR  &kp STAR  &kp LPAR  &none     &none    &kp EQUAL
+        &trans  &kp NUBS     &kp PIPE2   &none     &kp RBKT   &kp FSLH   &kp QMARK   &kp LBRC &kp RBRC  &none     &kp TILDE    &kp TILDE
         &trans    &trans    &trans    &trans    &trans     &trans
       >;
     };
@@ -107,8 +109,8 @@
       //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
 
       bindings = <
-        &kp AT_SIGN     &kp CARET           &kp AMPERSAND         &kp STAR         &kp QMARK         &kp NUBS    &kp PIPE2         &kp COLON  &kp APOS  &kp PERIOD  &kp GRAVE  &kp NUHS
-        &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &none         &kp TILDE2    &none         &none  &none  &none  &none  &bt BT_CLR_ALL
+        &none     &none           &none         &none         &none         &none    &none         &none  &none  &none  &none  &none
+        &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &none         &none    &none         &none  &none  &none  &none  &bt BT_CLR_ALL
         &none            &none           &none         &none         &none         &none    &none         &none  &none  &none  &none  &none
         &trans  &trans      &trans         &trans       &trans  &trans
       >;
