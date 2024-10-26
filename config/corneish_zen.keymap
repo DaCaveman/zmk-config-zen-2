@@ -84,13 +84,13 @@
       display-name = "SYMBOL";
 
       // -----------------------------------------------------------------------------------------
-      // |  ESC |  !  |  " ' |  #  |  % |  &  |   |  "|"  |  [  |  ]  |  /  |  \  | ß |
+      // |  ESC |  !  |  " ' |  #  |  % |  &  |   |  "|"  |  [  |  ]  |  /  |  \  |  |
       // | TAB |  ^  |  @  |   §  |  *  |   $  |   |  = |  (  |  )  |  ]  |    |  ?  |
       // | CRTL |   <  |   >  |     |  +  |  -  |   |  _  |  {  |  }  |    |  |  ~   |
       //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
 
       bindings = <
-        &trans  &kp EXCL     &td1    &kp BSLH  &kp PRCNT  &kp AMPS    &kp PIPE   &kp LBKT  &kp RBKT  &kp AMPS  &kp BSLH &de_eszett
+        &trans  &kp EXCL     &td1    &kp BSLH  &kp PRCNT  &kp AMPS    &kp PIPE   &kp LBKT  &kp RBKT  &kp AMPS  &kp BSLH &kp DLLR
         &trans  &kp CARET    &kp AT  &kp HASH     &kp RPAR  &kp DLLR    &kp EQUAL  &kp LPAR  &kp RPAR  &none     &none    &kp EQUAL
         &trans  &none        &none   &none     &kp RBKT   &kp FSLH   &kp UNDER   &kp LBRC &kp RBRC  &none     &none    &kp TILDE
         &trans    &trans    &trans    &trans    &trans     &trans
