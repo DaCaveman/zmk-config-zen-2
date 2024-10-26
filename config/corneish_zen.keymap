@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
+* Copyright (c) 2020 The ZMK Contributors
+*
+* SPDX-License-Identifier: MIT
+*/
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -11,107 +11,107 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    chosen {
-        zmk,matrix_transform = &default_transform;
+  chosen {
+    zmk,matrix_transform = &default_transform;
 
-        // zmk,matrix_transform = &five_column_transform;
-    };
+    // zmk,matrix_transform = &five_column_transform;
+  };
 };
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
+  conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+      if-layers = <1 2>;
+      then-layer = <3>;
+    };
+  };
+
+  behaviors {
+    td0: td0 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TD0";
+      #binding-cells = <0>;
+      bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+    };
+    td1: td1 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TD1";
+      #binding-cells = <0>;
+      tapping-term-ms = <300>;
+      bindings = <&kp DQT>, <&kp GRAVE>;
+    };
+  };
+
+  keymap {
+    compatible = "zmk,keymap";
+
+    default_layer {
+      display-name = "QWERTZ";
+
+      // --------------------------------------------------------------------------------
+      // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U   |  I  |  O  |  P  | Ü |
+      // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  Ö  |  Ä   | 
+      // | < |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  UNDER  | ASTRK  |
+      //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
+
+      bindings = <
+        &kp ESC    &kp Q  &kp W  &kp E     &kp R  &kp T          &kp Z        &kp U  &kp I      &kp O    &kp P  &de_ue
+        &kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G          &kp H        &kp J  &kp K      &kp L    &de_oe   &de_ae
+        &kp LT     &kp Z  &kp X  &kp C     &kp V  &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp UNDER  &kp ASTRK
+        &kp DEL  &kp LALT  &lt 2 SPACE    &lt 1 ENTER  &kp LEFT_SHIFT  &kp BSPC
+      >;
     };
 
-    behaviors {
-        td0: td0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD0";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
-        };
-        //td1: td1 {
-        //    compatible = "zmk,behavior-tap-dance";
-        //    label = "TD1";
-        //    #binding-cells = <0>;
-        //    tapping-term-ms = <300>;
-        //    bindings = <&kp DQT>, <&kp GRAVE>;
-        //};
+    lower_layer {
+      display-name = "NUMBER";
+
+      // -----------------------------------------------------------------------------------------
+      // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+      // | CTLR|     |     |     |     |     |   | LFT | DWN |  UP | RGT | PG_DN | PG_UP |
+      // |   F1   |   F2  |  F3   |   F4  |  F5   |   F6  |  | F7  |   F8  |   F9  |   F10  |  F11   |   F12  |
+      //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
+
+      bindings = <
+        &trans  &kp N1  &kp N2   &kp N3 &kp N4 &kp N5      &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &none
+        &trans  &none   &none    &none  &none  &none       &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp PG_DN &kp PG_UP
+        &kp F1  &kp F2  &kp F3   &kp F4 &kp F5 &kp F6      &kp F7           &kp F8           &kp F9           &kp F10          &kp F11   &kp F12
+        &trans        &trans        &trans             &trans          &trans          &trans
+      >;
     };
 
-    keymap {
-        compatible = "zmk,keymap";
+    raise_layer {
+      display-name = "SYMBOL";
 
-        default_layer {
-            display-name = "QWERTz";
+      // -----------------------------------------------------------------------------------------
+      // |  TAB |  !  |  " ' |  #  |  % |  &  |   |  "|"  |  [  |  ]  |  /  |  \  |  |
+      // | CTRL |  ^  |  @  |     |  *  |   $  |   |  = |  (  |  )  |  ]  |    |     |
+      // | SHFT |     |     |     |  +  |  -  |   |  _  |  {  |  }  |    |  |  ~   |
+      //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
 
-            // --------------------------------------------------------------------------------
-            // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U   |  I  |  O  |  P  | Ü |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  Ö  |  Ä   | 
-            // | < |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  UNDER  | ASTRK  |
-            //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
-
-            bindings = <
-&kp ESC    &kp Q  &kp W  &kp E     &kp R  &kp T          &kp Z        &kp U  &kp I      &kp O    &kp P  &kp Ü
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G          &kp H        &kp J  &kp K      &kp L    &kp Ö  &kp Ä
-&kp LT     &kp Z  &kp X  &kp C     &kp V  &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp UNDER  &kp ASTRK
-                         &kp DEL  &kp LALT  &lt 2 SPACE    &lt 1 ENTER  &kp LEFT_SHIFT  &kp BSPC
-            >;
-        };
-
-        lower_layer {
-            display-name = "NUMBER";
-
-            // -----------------------------------------------------------------------------------------
-            // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | CTLR|     |     |     |     |     |   | LFT | DWN |  UP | RGT | PG_DN | PG_UP |
-            // |   F1   |   F2  |  F3   |   F4  |  F5   |   F6  |  | F7  |   F8  |   F9  |   F10  |  F11   |   F12  |
-            //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
-
-            bindings = <
-&trans  &kp N1  &kp N2   &kp N3 &kp N4 &kp N5      &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &none
-&trans  &none   &none    &none  &none  &none       &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp PG_DN &kp PG_UP
-&kp F1  &kp F2  &kp F3   &kp F4 &kp F5 &kp F6      &kp F7           &kp F8           &kp F9           &kp F10          &kp F11   &kp F12
-                                         &trans        &trans        &trans             &trans          &trans          &trans
-            >;
-        };
-
-        raise_layer {
-            display-name = "SYMBOL";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  "  |  #  |  % |  &  |   |  "|"  |  [  |  ]  |  /  |  \  |  |
-            // | CTRL |  ^  |  @  |     |  *  |   $  |   |  = |  (  |  )  |  ]  |    |     |
-            // | SHFT |     |     |     |  +  |  -  |   |  _  |  {  |  }  |    |  |  ~   |
-            //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
-
-            bindings = <
-&trans  &kp EXCL     &none    &kp HASH  &kp PRCNT  &kp AMPS    &kp PIPE   &kp LBKT  &kp RBKT  &kp FSLH  &kp BSLH &none
-&trans  &kp CARET    &kp AT  &none     &kp ASTRK  &kp DLLR    &kp EQUAL  &kp LPAR  &kp RPAR  &none     &none    &none
-&trans  &none        &none   &none     &kp PLUS   &kp MINUS   &kp UNDER   &kp LBRC &kp RBRC  &none     &none    &kp TILDE
-                                    &trans    &trans    &trans    &trans    &trans     &trans
-            >;
-        };
-
-        layer_3 {
-            display-name = "Fn";
-
-            // -----------------------------------------------------------------------------------------
-            // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-            // | BT_CLR |  BT0  |  BT1  |  BT2   |  BT3  |     |   |   |    |    |    |    |     |
-            // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
-
-            bindings = <
-&none            &none           &none         &none         &none         &none    &none         &none  &none  &none  &none  &none
-&bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none    &none         &none  &none  &none  &none  &none
-&none            &none           &none         &none         &none         &none    &none         &none  &none  &none  &none  &none
-                            &trans  &trans      &trans         &trans       &trans  &trans
-            >;
-        };
+      bindings = <
+        &trans  &kp EXCL     &td1    &kp HASH  &kp PRCNT  &kp AMPS    &kp PIPE   &kp LBKT  &kp RBKT  &kp FSLH  &kp BSLH &none
+        &trans  &kp CARET    &kp AT  &none     &kp ASTRK  &kp DLLR    &kp EQUAL  &kp LPAR  &kp RPAR  &none     &none    &none
+        &trans  &none        &none   &none     &kp PLUS   &kp MINUS   &kp UNDER   &kp LBRC &kp RBRC  &none     &none    &kp TILDE
+        &trans    &trans    &trans    &trans    &trans     &trans
+      >;
     };
+
+    layer_3 {
+      display-name = "Fn";
+
+      // -----------------------------------------------------------------------------------------
+      // |      |     |     |     |     |     |   |     |     |     |     |     |      |
+      // | BT_CLR |  BT0  |  BT1  |  BT2   |  BT3  |     |   |   |    |    |    |    |     |
+      // |      |     |     |     |     |     |   |     |     |     |     |     |      |
+      //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
+
+      bindings = <
+        &none            &none           &none         &none         &none         &none    &none         &none  &none  &none  &none  &none
+        &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none    &none         &none  &none  &none  &none  &none
+        &none            &none           &none         &none         &none         &none    &none         &none  &none  &none  &none  &none
+        &trans  &trans      &trans         &trans       &trans  &trans
+      >;
+    };
+  };
 };
