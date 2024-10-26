@@ -39,7 +39,7 @@
       label = "TD1";
       #binding-cells = <0>;
       tapping-term-ms = <300>;
-      bindings = <&kp SQT>, <&kp PIPE>;
+      bindings = <&kp AT>, <&kp PIPE>;
     };
   };
 
@@ -90,8 +90,8 @@
       //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
 
       bindings = <
-        &trans  &kp EXCL     &td1    &kp BSLH  &kp PRCNT  &kp AMPS    &kp PIPE   &kp LBKT  &kp RBKT  &kp AMPS  &kp BSLH &kp DLLR
-        &trans  &kp CARET    &kp AT  &kp HASH     &kp RPAR  &kp DLLR    &kp EQUAL  &kp LPAR  &kp RPAR  &none     &none    &kp EQUAL
+        &trans  &kp EXCL     &td1    &kp BSLH  &kp PRCNT  &kp CARET    &kp PIPE   &kp LBKT  &kp RBKT  &kp AMPS  &kp BSLH &kp DLLR
+        &trans  &kp CARET    &kp AT  &kp HASH     &kp RPAR  &kp DLLR    &kp RPAR  &kp LPAR  &kp RPAR  &none     &none    &kp EQUAL
         &trans  &none        &none   &none     &kp RBKT   &kp FSLH   &kp UNDER   &kp LBRC &kp RBRC  &none     &none    &kp TILDE
         &trans    &trans    &trans    &trans    &trans     &trans
       >;
@@ -107,8 +107,8 @@
       //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
 
       bindings = <
-        &none            &none           &none         &none         &none         &none    &none         &none  &none  &none  &none  &none
-        &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none    &none         &none  &none  &none  &none  &none
+        &kp AT_SIGN     &kp CARET           &kp AMPERSAND         &kp STAR         &kp QMARK         &kp NUBS    &kp PIPE2         &kp COLON  &kp APOS  &kp PERIOD  &kp GRAVE  &kp NUHS
+        &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &none         &kp TILDE2    &none         &none  &none  &none  &none  &bt BT_CLR_ALL
         &none            &none           &none         &none         &none         &none    &none         &none  &none  &none  &none  &none
         &trans  &trans      &trans         &trans       &trans  &trans
       >;
