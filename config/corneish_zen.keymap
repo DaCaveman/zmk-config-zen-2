@@ -47,7 +47,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "QWERTY";
+            display-name = "QWERTz";
 
             // --------------------------------------------------------------------------------
             // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U   |  I  |  O  |  P  | Ü |
@@ -90,7 +90,7 @@
             //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
 
             bindings = <
-&trans  &kp EXCL     &td1    &kp HASH  &kp PRCNT  &kp AMPS    &kp PIPE   &kp LBKT  &kp RBKT  &kp FSLH  &kp BSLH &none
+&trans  &kp EXCL     &none    &kp HASH  &kp PRCNT  &kp AMPS    &kp PIPE   &kp LBKT  &kp RBKT  &kp FSLH  &kp BSLH &none
 &trans  &kp CARET    &kp AT  &none     &kp ASTRK  &kp DLLR    &kp EQUAL  &kp LPAR  &kp RPAR  &none     &none    &none
 &trans  &none        &none   &none     &kp PLUS   &kp MINUS   &kp UNDER   &kp LBRC &kp RBRC  &none     &none    &kp TILDE
                                     &trans    &trans    &trans    &trans    &trans     &trans
