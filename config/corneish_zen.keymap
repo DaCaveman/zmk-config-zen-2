@@ -72,9 +72,9 @@
       //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
 
       bindings = <
-        &kp ESC    &kp Q  &kp W  &kp E     &kp R  &kp T          &kp Y        &kp U  &kp I      &kp O    &kp P  &kp DE_U_UMLAUT
+        &kp ESC    &kp Q  &kp W  &kp E     &kp R  &kp T          &kp DE_Z        &kp U  &kp I      &kp O    &kp P  &kp DE_U_UMLAUT
         &kp TAB  &kp A  &kp S  &kp D     &kp F  &kp G          &kp H        &kp J  &kp K      &kp L    &kp DE_O_UMLAUT   &kp DE_A_UMLAUT
-        &kp LCTRL     &kp Z  &kp X  &kp C     &kp V  &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI
+        &kp LCTRL     &kp DE_Y  &kp X  &kp C     &kp V  &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI
         &kp DEL  &kp LALT  &lt 2 SPACE    &lt 1 ENTER  &kp LEFT_SHIFT  &kp BSPC
       >;
     };
@@ -101,13 +101,13 @@
 
       // -----------------------------------------------------------------------------------------
       // |  ESC |  !  |  "' |  #  |  % |  &  |   |  "|"  |  [  |  ]  |  /  |  \  | ß |
-      // | TAB |  ^  |  @  |   §  |  *  |   $  |   |  = |  (  |  )  |    |    |  ?  |
-      // | CRTL |   <  |   >  |     |  +  |  -  |   |  _  |  {  |  }  |    | ° |  ~   |
+      // | TAB |  ^  |  @  |   §  |  *  |   $  |   |  = |  (  |  )  |  ?  |  `´  |    |
+      // | CRTL |   <  |   >  |   €  |  +  |  -  |   |  _  |  {  |  }  |  ²³µ  | ° |  ~   |
       //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
 
       bindings = <
         &trans  &kp DE_EXCL     &td1    &kp DE_HASH  &kp DE_PRCNT  &kp DE_AMPS    &kp DE_PIPE   &kp DE_LBKT  &kp DE_RBKT  &kp DE_FSLH  &kp DE_BSLH &kp DE_SZ
-        &trans  &kp DE_CARET    &kp DE_AT  &kp DE_SECT     &kp DE_STAR  &kp DE_DLLR    &kp DE_EQUAL  &kp DE_LPAR  &kp DE_RPAR  &none     &td3    &kp DE_QMARK
+        &trans  &kp DE_CARET    &kp DE_AT  &kp DE_SECT     &kp DE_STAR  &kp DE_DLLR    &kp DE_EQUAL  &kp DE_LPAR  &kp DE_RPAR  &kp DE_QMARK     &td3    &none
         &trans  &kp DE_LT     &kp DE_GT   &kp DE_EURO     &kp DE_PLUS   &kp DE_MINUS   &kp DE_UNDER   &kp DE_LBRC &kp DE_RBRC  &td2     &kp DE_DEG    &kp DE_TILDE
         &trans    &trans    &trans    &trans    &trans     &trans
       >;
