@@ -63,7 +63,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                , <&macro_tap &kp DE_CARET &kp SPACE>
+                = <&macro_tap &kp DE_CARET &kp SPACE>
                 ;
         };
     };
@@ -109,14 +109,14 @@
       display-name = "SYMBOL";
 
                                             // -----------------------------------------------------------------------------------------
-                                            // |  ESC |  !  |  "' |  #  |  % |  &  |***|  ?  |  [  |  ]  |  \  | "|" |  ß |
-                                            // | TAB |  ^  |  _  |  §  |  @  |  $  |***|  /  |  (  |  )  |  =  | `´  |    |
+                                            // |  ESC |  !  |  "' |  #  |  % |  &  |***|  ?  |  [  |  ]  |  =  | "|" |  ß |
+                                            // | TAB |  ^  |  _  |  §  |  @  |  $  |***|  /  |  (  |  )  |  \  | `´  |    |
                                             // | CRTL |  <  | >  |  €  |  +  |  -  |***|  *  |  {  |  }  | ²³µ |  °  | ~  |
                                             //                 | DEL | ALT | 2 SPC |***| 1 ENT | SHIFT | BSPC |
 
       bindings = <
-        &trans  &kp DE_EXCL   &td1          &kp DE_HASH  &kp DE_PRCNT  &kp DE_AMPS       &kp DE_QMARK  &kp DE_LBKT  &kp DE_RBKT  &kp DE_BSLH  &kp DE_PIPE  &kp DE_SZ
-        &trans  &kp DE_CARET  &kp DE_UNDER  &kp DE_SECT  &kp DE_AT     &kp DE_DLLR       &kp DE_FSLH   &kp DE_LPAR  &kp DE_RPAR  &kp DE_EQUAL     &td3        &none
+        &trans  &kp DE_EXCL   &td1          &kp DE_HASH  &kp DE_PRCNT  &kp DE_AMPS       &kp DE_QMARK  &kp DE_LBKT  &kp DE_RBKT  &kp DE_EQUAL  &kp DE_PIPE  &kp DE_SZ
+        &trans  &kp DE_CARET  &kp DE_UNDER  &kp DE_SECT  &kp DE_AT     &kp DE_DLLR       &kp DE_FSLH   &kp DE_LPAR  &kp DE_RPAR  &kp DE_BSLH     &td3        &none
         &trans  &kp DE_LT     &kp DE_GT     &kp DE_EURO  &kp DE_PLUS   &kp DE_MINUS      &kp DE_STAR   &kp DE_LBRC  &kp DE_RBRC      &td2     &kp DE_DEG   &kp DE_TILDE
                                                             &trans  &trans  &trans       &trans  &trans  &trans
       >;
