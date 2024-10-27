@@ -58,6 +58,15 @@
       bindings = <&kp DE_GRAVE>, <&kp DE_ACUTE>;
     };
   };
+  macros {
+        FirstLet: FirstLet{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                , <&macro_tap &kp DE_CARET &kp SPACE>
+                ;
+        };
+    };
 
   keymap {
     compatible = "zmk,keymap";
@@ -65,68 +74,68 @@
     default_layer {
       display-name = "QWERTZ";
 
-      // --------------------------------------------------------------------------------
-      // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U   |  I  |  O  |  P  | Ü |
-      // | TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  Ö  |  Ä   | 
-      // | CRTL |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  | - | WIN  |
-      //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
+                                            // --------------------------------------------------------------------------------
+                                            // |  ESC |  Q  |  W  |  E  |  R  |  T  |***|  Z  |  U   |  I  |  O  |  P  |  Ü  |
+                                            // |  TAB |  A  |  S  |  D  |  F  |  G  |***|  H  |  J   |  K  |  L  |  Ö  |  Ä  | 
+                                            // | CRTL |  Y  |  X  |  C  |  V  |  B  |***|  N  |  M   |  ,  |  .  |  -  | WIN |
+                                            //                  | DEL | ALT | 2 SPC |***| 1 ENT | SHIFT | BSPC |
 
-      bindings = <
-        &kp ESC    &kp Q  &kp W  &kp E     &kp R  &kp T          &kp DE_Z        &kp U  &kp I      &kp O    &kp P  &kp DE_U_UMLAUT
-        &kp TAB  &kp A  &kp S  &kp D     &kp F  &kp G          &kp H        &kp J  &kp K      &kp L    &kp DE_O_UMLAUT   &kp DE_A_UMLAUT
-        &kp LCTRL     &kp DE_Y  &kp X  &kp C     &kp V  &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI
-        &kp DEL  &kp LALT  &lt 2 SPACE    &lt 1 ENTER  &kp LEFT_SHIFT  &kp BSPC
-      >;
+                                  bindings = <
+                                    &kp ESC    &kp Q     &kp W  &kp E  &kp R  &kp T      &kp DE_Z  &kp U  &kp I      &kp O    &kp P            &kp DE_U_UMLAUT
+                                    &kp TAB    &kp A     &kp S  &kp D  &kp F  &kp G      &kp H     &kp J  &kp K      &kp L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
+                                    &sk LCTRL  &kp DE_Y  &kp X  &kp C  &kp V  &kp B      &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH         &kp RGUI
+                                                     &kp DEL  &kp LALT  &lt 2 SPACE      &lt 1 ENTER  &kp LEFT_SHIFT  &kp BSPC
+                >;
     };
 
     lower_layer {
       display-name = "NUMBER";
 
-      // -----------------------------------------------------------------------------------------
-      // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | |
-      // | TAB|     |     |     |     |     |   | LFT | DWN |  UP | RGT | PG_DN | PG_UP |
-      // |   F1   |   F2  |  F3   |   F4  |  F5   |   F6  |  | F7  |   F8  |   F9  |   F10  |  F11   |   F12  |
-      //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
+                                            // -----------------------------------------------------------------------------------------
+                                            // |  ESC |  1  |  2  |  3  |  4  |  5  |***|   6  |  7  |  8  |  9  |   0   |       |
+                                            // | TAB  |  ^  |     |     |  '  |  $  |***|  LFT | DWN |  UP | RGT | PG_DN | PG_UP |
+                                            // |  F1  | F2  | F3  | F4  | F5  | F6  |***|  F7  | F8  | F9  | F10 |  F11  |  F12  |
+                                            //                  | DEL | ALT | 2 SPC |***| 1 ENT | SHIFT | BSPC |
 
-      bindings = <
-        &trans  &kp N1  &kp N2   &kp N3 &kp N4 &kp N5      &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &none
-        &trans  &none   &none    &none  &none  &none       &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp PG_DN &kp PG_UP
-        &kp F1  &kp F2  &kp F3   &kp F4 &kp F5 &kp F6      &kp F7           &kp F8           &kp F9           &kp F10          &kp F11   &kp F12
-        &trans        &trans        &trans             &trans          &trans          &trans
+                        bindings = <
+                          &trans    &kp N1    &kp N2  &kp N3  &kp N4        &kp N5          &kp N6    &kp N7   &kp N8    &kp N9     &kp N0     &none
+                          &trans  &FirstLet   &none   &none  &kp DE_SQT  &kp DE_DLLR       &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp PG_DN  &kp PG_UP
+                          &kp F1   &kp F2     &kp F3  &kp F4  &kp F5        &kp F6          &kp F7    &kp F8   &kp F9   &kp F10    &kp F11    &kp F12
+                                                              &trans  &trans  &trans       &trans  &trans  &trans
       >;
     };
 
     raise_layer {
       display-name = "SYMBOL";
 
-      // -----------------------------------------------------------------------------------------
-      // |  ESC |  !  |  "' |  #  |  % |  &  |   |  "|"  |  [  |  ]  |  /  |  \  | ß |
-      // | TAB |  ^  |  @  |   §  |  *  |   $  |   |  = |  (  |  )  |  ?  |  `´  |    |
-      // | CRTL |   <  |   >  |   €  |  +  |  -  |   |  _  |  {  |  }  |  ²³µ  | ° |  ~   |
-      //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
+                                            // -----------------------------------------------------------------------------------------
+                                            // |  ESC |  !  |  "' |  #  |  % |  &  |***|  ?  |  [  |  ]  |  \  | "|" |  ß |
+                                            // | TAB |  ^  |  _  |  §  |  @  |  $  |***|  /  |  (  |  )  |  =  | `´  |    |
+                                            // | CRTL |  <  | >  |  €  |  +  |  -  |***|  *  |  {  |  }  | ²³µ |  °  | ~  |
+                                            //                 | DEL | ALT | 2 SPC |***| 1 ENT | SHIFT | BSPC |
 
       bindings = <
-        &trans  &kp DE_EXCL     &td1    &kp DE_HASH  &kp DE_PRCNT  &kp DE_AMPS    &kp DE_PIPE   &kp DE_LBKT  &kp DE_RBKT  &kp DE_FSLH  &kp DE_BSLH &kp DE_SZ
-        &trans  &kp DE_CARET    &kp DE_AT  &kp DE_SECT     &kp DE_STAR  &kp DE_DLLR    &kp DE_EQUAL  &kp DE_LPAR  &kp DE_RPAR  &kp DE_QMARK     &td3    &none
-        &trans  &kp DE_LT     &kp DE_GT   &kp DE_EURO     &kp DE_PLUS   &kp DE_MINUS   &kp DE_UNDER   &kp DE_LBRC &kp DE_RBRC  &td2     &kp DE_DEG    &kp DE_TILDE
-        &trans    &trans    &trans    &trans    &trans     &trans
+        &trans  &kp DE_EXCL   &td1          &kp DE_HASH  &kp DE_PRCNT  &kp DE_AMPS       &kp DE_QMARK  &kp DE_LBKT  &kp DE_RBKT  &kp DE_BSLH  &kp DE_PIPE  &kp DE_SZ
+        &trans  &kp DE_CARET  &kp DE_UNDER  &kp DE_SECT  &kp DE_AT     &kp DE_DLLR       &kp DE_FSLH   &kp DE_LPAR  &kp DE_RPAR  &kp DE_EQUAL     &td3        &none
+        &trans  &kp DE_LT     &kp DE_GT     &kp DE_EURO  &kp DE_PLUS   &kp DE_MINUS      &kp DE_STAR   &kp DE_LBRC  &kp DE_RBRC      &td2     &kp DE_DEG   &kp DE_TILDE
+                                                            &trans  &trans  &trans       &trans  &trans  &trans
       >;
     };
 
     layer_3 {
       display-name = "Fn";
 
-      // -----------------------------------------------------------------------------------------
-      // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-      // | BT_CLR |  BT0  |  BT1  |  BT2   |  BT3  |     |   |   |    |    |    |    |     |
-      // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-      //                    | DEL | ALT | 2 SPC |   | 1 ENT | SHIFT  | BSPC |
+                                              // -----------------------------------------------------------------------------------------
+                                              // |     |     |     |     |    |    |***|   |         |    |    |            |            |
+                                              // | BT0 | BT1 | BT2 | BT3 |    |    |***|   | BT NXT  |    |    | BT CLR CUR | BT CLR ALL |
+                                              // |     |     |     |     |    |    |***|   | OUT TOG |    |    |            |            |
+                                              //               | DEL | ALT | 2 SPC |***| 1 ENT | SHIFT | BSPC |
 
-      bindings = <
-        &none     &none           &none         &none         &none         &none    &none         &none  &none  &none  &none  &none
-        &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &none         &none    &none         &none  &none  &none  &none  &bt BT_CLR_ALL
-        &none            &none           &none         &none         &none         &none    &none         &none  &none  &none  &none  &none
-        &trans  &trans      &trans         &trans       &trans  &trans
+                    bindings = <
+                      &sys_reset       &none         &none         &none      &none     &none    &none     &none      &none  &none     &none     &sys_reset
+                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none     &none    &none   &bt BT_NXT   &none  &none  &bt BT_CLR  &bt BT_CLR_ALL
+                      &bootloader      &none         &none         &none      &none     &none    &none  &out OUT_TOG  &none  &none     &none     &bootloader
+                                                            &trans  &trans  &trans       &trans  &trans  &tran
       >;
     };
   };
