@@ -99,16 +99,16 @@
       display-name = "DVORAK";
 
                                             // --------------------------------------------------------------------------------
-                                            // |  ESC |  Ü  |  ,  |  .  |  P  |  Y  |***|  F  |  G   |  C  |  T  |  Z  |  ?  |
+                                            // |  ESC |  Ü  |  ,  |  .  |  P  |  Y  |***|  F  |  G   |  C  |  T  |  Z  |  ß  |
                                             // |  TAB |  A  |  O  |  E  |  I  |  U  |***|  H  |  D   |  R  |  N  |  S  |  L  | 
-                                            // | CRTL |  Ä  |  Ö  |  Q  |  J  |  K  |***|  X  |  B   |  M  |  W  |  V  | WIN |
-                                            //            | DEL | ALT SPACE | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
+                                            // |  Ä  |  Ö  |  Q  |  J  |  K  |  X  |***|  B  |  M   |  W  |  V  |  '  | WIN |
+                                            //            | DEL CTRL | ALT SPACE | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
 
             bindings = <
-              &kp ESC    &kp DE_U_UMLAUT  &kp COMMA        &kp DOT  &kp P  &kp DE_Y      &kp F  &kp G  &kp C  &kp T  &kp DE_Z  &kp DE_QMARK
-              &kp TAB    &kp A            &kp O            &kp E    &kp I  &kp U         &kp H  &kp D  &kp R  &kp N  &kp S     &kp L
-              &sk LCTRL  &kp DE_A_UMLAUT  &kp DE_O_UMLAUT  &kp Q    &kp J  &kp K         &kp X  &kp B  &kp M  &kp W  &kp V     &kp RGUI
-                                                            &trans  &trans  &trans       &trans  &trans  &trans
+              &kp ESC          &kp DE_U_UMLAUT  &kp COMMA  &kp DOT  &kp P  &kp DE_Y      &kp F  &kp G  &kp C  &kp T  &kp DE_Z  &kp DE_QMARK
+              &kp TAB          &kp A            &kp O      &kp E    &kp I  &kp U         &kp H  &kp D  &kp R  &kp N  &kp S     &kp L
+              &bhm LCTRL DE_A_UMLAUT  &kp DE_O_UMLAUT  &kp Q      &kp J    &kp K  &kp X         &kp B  &kp M  &kp W  &kp V  &kp DE_HASH   &kp RGUI
+                                                    &bhm LCTRL DEL  &trans  &trans       &trans  &trans  &trans
 >;
     };
     layer_2 {
@@ -149,13 +149,13 @@
 
                                             // -----------------------------------------------------------------------------------------
                                             // |  ESC |  !  |  "' |  #  |  % |  &  |***|  ?  |  [  |  ]  |  =  | "|" |  ß |
-                                            // | TAB |  ^  |  _  |  §  |  @  |  $  |***|  /  |  (  |  )  |  \  | `´  |    |
+                                            // | TAB |  ^  |  _  |  §  |  @  |  $  |***|  /  |  (  |  )  |  \  | `´  |  _  |
                                             // | CRTL |  <  | >  |  €  |  +  |  -  |***|  *  |  {  |  }  | ²³µ |  °  | ~  |
                                             //           | DEL | ALT SPACE | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
 
       bindings = <
         &trans  &kp DE_EXCL   &td1          &kp DE_HASH  &kp DE_PRCNT  &kp DE_AMPS       &kp DE_QMARK  &kp DE_LBKT  &kp DE_RBKT  &kp DE_EQUAL  &kp DE_PIPE  &kp DE_SZ
-        &trans  &kp DE_CARET  &kp DE_UNDER  &kp DE_SECT  &kp DE_AT     &kp DE_DLLR       &kp DE_FSLH   &kp DE_LPAR  &kp DE_RPAR  &kp DE_BSLH     &td3        &none
+        &trans  &kp DE_CARET  &kp DE_UNDER  &kp DE_SECT  &kp DE_AT     &kp DE_DLLR       &kp DE_FSLH   &kp DE_LPAR  &kp DE_RPAR  &kp DE_BSLH     &td3        &kp DE_UNDER
         &trans  &kp DE_LT     &kp DE_GT     &kp DE_EURO  &kp DE_PLUS   &kp DE_MINUS      &kp DE_STAR   &kp DE_LBRC  &kp DE_RBRC      &td2     &kp DE_DEG   &kp DE_TILDE
                                                             &trans  &trans  &trans       &trans  &trans  &trans
       >;
