@@ -159,7 +159,7 @@
               &kp ESC    &kp DE_U_UMLAUT  &kp COMMA        &kp DOT  &kp P  &kp DE_Y      &kp F  &kp G  &kp C  &kp T  &kp DE_Z  &kp DE_QMARK
               &kp TAB    &kp A            &kp O            &kp E    &kp I  &kp U         &kp H  &kp D  &kp R  &kp N  &kp S     &kp DE_PIPE
               &sk LCTRL  &kp DE_A_UMLAUT  &kp DE_O_UMLAUT  &kp Q    &kp J  &kp K         &kp X  &kp B  &kp M  &kp W  &kp V     &kp RGUI
-                                                            &trans  &trans  &trans       &trans  &trans  &trans
+                                              &kp DEL  &bhm LALT SPACE &lt 2 SPACE      &lt 1 ENTER  &bhm LEFT_SHIFT SPACE &kp BSPC
 >;
     };
   };
