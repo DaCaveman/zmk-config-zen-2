@@ -89,26 +89,26 @@
                                             //            | DEL | ALT SPACE | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
 
                                   bindings = <
-                                    &kp ESC    &kp Q     &kp W  &kp E  &kp R  &kp T      &kp DE_Z  &kp U  &kp I      &kp O    &kp P            &kp DE_U_UMLAUT
-            &kp TAB    &bhm LGUI A     &bhm LALT S  &bhm LSFT D  &bhm LCTL F  &kp G      &kp H     &bhm RCTL J  &bhm RSFT K      &bhm RALT L    &bhm RGUI DE_O_UMLAUT  &kp DE_A_UMLAUT
-                                    &sk LCTRL  &kp DE_Y  &kp X  &kp C  &kp V  &kp B      &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH         &kp RGUI
-                                              &kp DEL  &bhm LALT SPACE &lt 4 SPACE      &lt 3 ENTER  &bhm LEFT_SHIFT SPACE &kp BSPC
+                &kp ESC    &kp Q        &kp W        &kp E        &kp R        &kp T      &kp DE_Z  &kp U        &kp I        &kp O        &kp P                  &kp DE_U_UMLAUT
+                &kp TAB    &bhm LGUI A  &bhm LALT S  &bhm LSFT D  &bhm LCTL F  &kp G      &kp H     &bhm RCTL J  &bhm RSFT K  &bhm RALT L  &bhm RGUI DE_O_UMLAUT  &kp DE_A_UMLAUT
+                &sk LCTRL  &kp DE_Y     &kp X        &kp C        &kp V        &kp B      &kp N     &kp M        &kp COMMA    &kp DOT      &kp FSLH               &kp RGUI
+                                                &kp DEL  &bhm LALT SPACE &lt 4 SPACE      &lt 3 ENTER  &bhm LEFT_SHIFT SPACE &kp BSPC
                 >;
     };
     layer_1 {
       display-name = "DVORAK";
 
-                                            // --------------------------------------------------------------------------------
-                                            // |  ESC |  Ü  |  ,  |  .  |  P  |  Y  |***|  F  |  G   |  C  |  T  |  Z  |  ß  |
-                                            // |  TAB |  A  |  O  |  E  |  I  |  U  |***|  H  |  D   |  R  |  N  |  S  |  L  | 
-                                            // |  Ä  |  Ö  |  Q  |  J  |  K  |  X  |***|  B  |  M   |  W  |  V  |  '  | WIN |
-                                            //            | DEL CTRL | ALT SPACE | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
+                                                  // --------------------------------------------------------------------------------
+                                                  // |  ESC |  Ü  |  ,  |  .  |  P  |  Y  |***|  F  |  G   |  C  |  T  |  Z  |  ß  |
+                                                  // |  TAB |  A  |  O  |  E  |  I  |  U  |***|  H  |  D   |  R  |  N  |  S  |  L  | 
+                                                  // |  Ä  |  Ö  |  Q  |  J  |  K  |  X   |***|  B  |  M   |  W  |  V  |  '  | WIN |
+                                                  //       | DEL CTRL | ALT SPACE | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
 
-            bindings = <
-              &kp ESC          &kp DE_U_UMLAUT  &kp COMMA  &kp DOT  &kp P  &kp DE_Y      &kp F  &kp G  &kp C  &kp T  &kp DE_Z  &kp DE_SZ
-              &kp TAB          &kp A            &kp O      &kp E    &kp I  &kp U         &kp H  &kp D  &kp R  &kp N  &kp S     &kp L
-              &bhm LCTRL DE_A_UMLAUT  &kp DE_O_UMLAUT  &kp Q      &kp J    &kp K  &kp X         &kp B  &kp M  &kp W  &kp V  &kp DE_HASH   &kp RGUI
-                                                    &bhm LCTRL DEL  &trans  &trans       &trans  &trans  &trans
+bindings = <
+        &kp ESC          &kp DE_U_UMLAUT  &kp COMMA    &kp DOT      &kp P        &kp DE_Y      &kp F  &kp G        &kp C        &kp T        &kp DE_Z     &kp DE_SZ
+        &kp TAB          &bhm LGUI A      &bhm LALT O  &bhm LSFT E  &bhm LCTL I  &kp U         &kp H  &bhm RCTL D  &bhm RSFT R  &bhm RALT N  &bhm RGUI S  &kp L
+        &kp DE_A_UMLAUT  &kp DE_O_UMLAUT  &kp Q        &kp J        &kp K        &kp X         &kp B  &kp M        &kp W        &kp V        &kp DE_HASH  &kp RGUI
+                                                                  &trans  &trans  &trans      &trans  &trans  &trans
 >;
     };
     layer_2 {
