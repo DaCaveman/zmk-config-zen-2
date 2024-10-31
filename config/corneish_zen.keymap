@@ -62,8 +62,7 @@
           #binding-cells = <2>;
           tapping-term-ms = <200>;    // <---[[moderate duration]]
           quick-tap-ms = <0>;
-          flavor = "balancek";
-          bindings = <&kp>, <&kp>;
+          flavor = "balanced"; bindings = <&kp>, <&kp>;
     };
     hm: homerow_mods {
           compatible = "zmk,behavior-hold-tap";
