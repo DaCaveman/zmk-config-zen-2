@@ -97,7 +97,7 @@
 
                                   bindings = <
                 &kp ESC    &kp Q        &kp W        &kp E        &kp R        &kp T      &kp DE_Z  &kp U        &kp I        &kp O        &kp P                  &kp DE_U_UMLAUT
-                &kp TAB    &hm LGUI A  &hm LALT S  &hm LSFT D  &hm LCTL F  &kp G      &kp H     &hm RCTL J  &hm RSFT K  &hm RALT L  &hm RGUI DE_O_UMLAUT  &kp DE_A_UMLAUT
+                &kp TAB    &hm LGUI A   &hm LALT S   &hm LSFT D   &hm LCTL F   &kp G      &kp H     &hm RCTL J   &hm RSFT K   &hm RALT L   &hm RGUI DE_O_UMLAUT   &kp DE_A_UMLAUT
                 &sk LCTRL  &kp DE_Y     &kp X        &kp C        &kp V        &kp B      &kp N     &kp M        &kp COMMA    &kp DOT      &kp FSLH               &kp RGUI
                                                 &kp DEL  &hm LALT SPACE &lt 4 SPACE      &lt 3 ENTER  &hm LEFT_SHIFT SPACE &kp BSPC
                 >;
@@ -112,8 +112,8 @@
                                                   //       | DEL CTRL | ALT SPACE | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
 
 bindings = <
-  &kp ESC                &kp DE_U_UMLAUT  &kp COMMA    &kp DOT      &kp P        &kp DE_Y      &kp F  &kp G        &kp C        &kp T        &kp DE_Z     &kp DE_SZ
-  &kp TAB                &hm LGUI A      &hm LALT O  &hm LSFT E  &hm LCTL I  &kp U         &kp H  &hm RCTL D  &hm RSFT R  &hm RALT N  &hm RGUI S  &kp L
+  &kp ESC               &kp DE_U_UMLAUT  &kp COMMA    &kp DOT      &kp P        &kp DE_Y      &kp F  &kp G        &kp C        &kp T        &kp DE_Z     &kp DE_SZ
+  &kp TAB               &hm LGUI A       &hm LALT O   &hm LSFT E   &hm LCTL I   &kp U         &kp H  &hm RCTL D   &hm RSFT R   &hm RALT N   &hm RGUI S   &kp L
   &hm LCTL DE_A_UMLAUT  &kp DE_O_UMLAUT  &kp Q        &kp J        &kp K        &kp X         &kp B  &kp M        &kp W        &kp V        &kp DE_HASH  &kp RGUI
                                                                   &trans  &trans  &trans      &trans  &trans  &trans
 >;
@@ -130,7 +130,7 @@ bindings = <
             bindings = <
                                     &kp ESC    &kp Q     &kp W  &kp E  &kp R  &kp T      &kp DE_Z  &kp U  &kp I      &kp O    &kp P            &kp DE_U_UMLAUT
                                     &kp TAB    &kp A     &kp S  &kp D  &kp F  &kp G      &kp H     &kp J  &kp K      &kp L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
-                                    &kp DOT  &kp DE_Y  &kp X  &kp C  &kp V  &kp B      &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH         &kp RGUI
+                                    &kp DOT    &kp DE_Y  &kp X  &kp C  &kp V  &kp B      &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH         &kp RGUI
                                                         &kp LCTRL  &kp LALT  &trans       &trans  &trans  &trans
 >;
     };
@@ -145,7 +145,7 @@ bindings = <
 
                         bindings = <
                           &trans    &kp N1    &kp N2  &kp N3  &kp N4        &kp N5          &kp N6    &kp N7   &kp N8    &kp N9     &kp N0     &none
-                          &trans  &FirstLet   &none   &none  &kp DE_SQT  &kp DE_DLLR       &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp PG_DN  &kp PG_UP
+                          &trans  &kp N0  &FirstLet   &none  &kp DE_SQT  &kp DE_DLLR       &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp PG_DN  &kp PG_UP
                           &kp F1   &kp F2     &kp F3  &kp F4  &kp F5        &kp F6          &kp F7    &kp F8   &kp F9   &kp F10    &kp F11    &kp F12
                                                               &trans  &trans  &trans       &trans  &trans  &trans
       >;
