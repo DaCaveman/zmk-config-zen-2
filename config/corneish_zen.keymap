@@ -87,7 +87,7 @@
       tapping-term-ms = <250>;    // <---[[moderate duration]]
       quick-tap-ms = <0>;
       flavor = "tap-preferred";
-      bindings = <&kp>, &FirstLet;
+      bindings = <&kp>, <&FirstLet>;
     };
   };
 
