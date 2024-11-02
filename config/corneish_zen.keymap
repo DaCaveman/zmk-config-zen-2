@@ -80,14 +80,6 @@
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
     };
-    hmM: homerow_modsMacro {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      tapping-term-ms = <250>;    // <---[[moderate duration]]
-      quick-tap-ms = <0>;
-      flavor = "tap-preferred";
-      bindings = <&kp>, <&FirstLet>;
-    };
   };
 
   keymap {
@@ -144,17 +136,17 @@
     layer_3 {
       display-name = "NUMBER";
 
-                                            // -----------------------------------------------------------------------------------------
-                                            // |  ESC |  1  |  2  |  3  |  4  |  5  |***|   6  |  7  |  8  |  9  |   0   |       |
-                                            // | TAB  |  0  |  ^  |     |  '  |  $  |***|  LFT | DWN |  UP | RGT | PG_DN | PG_UP |
-                                            // |  F1  | F2  | F3  | F4  | F5  | F6  |***|  F7  | F8  | F9  | F10 |  F11  |  F12  |
-                                            //            | DEL | ALT SPACE | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
+                                                    // -----------------------------------------------------------------------------------------
+                                                    // |  ESC |  1  |  2  |  3  |  4  |  5  |***|   6  |  7  |  8  |  9  |   0   |       |
+                                                    // | TAB  |  0  |  ^  |     |  '  |  $  |***|  LFT | DWN |  UP | RGT | PG_DN | PG_UP |
+                                                    // |  F1  | F2  | F3  | F4  | F5  | F6  |***|  F7  | F8  | F9  | F10 |  F11  |  F12  |
+                                                    //            | DEL | ALT SPACE | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
 
       bindings = <
-        &trans  &kp N1       &kp N2     &kp N3         &kp N4           &kp N5            &kp N6    &kp N7    &kp N8  &kp N9     &kp N0     &none
-        &trans  &hm LGUI N0  &hmM       &hm LSFT DE_AT &hm LCTL DE_SQT  &kp DE_DLLR       &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp PG_DN  &kp PG_UP
-        &kp F1  &kp F2       &kp F3     &kp F4         &kp F5           &kp F6            &kp F7    &kp F8    &kp F9  &kp F10    &kp F11    &kp F12
-                                                             &trans  &trans  &trans       &trans  &trans  &trans
+        &trans  &kp N1       &kp N2             &kp N3         &kp N4           &kp N5            &kp N6    &kp N7    &kp N8  &kp N9     &kp N0     &none
+        &trans  &hm LGUI N0  &hm LALT FirstLet  &hm LSFT DE_AT &hm LCTL DE_SQT  &kp DE_DLLR       &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp PG_DN  &kp PG_UP
+        &kp F1  &kp F2       &kp F3             &kp F4         &kp F5           &kp F6            &kp F7    &kp F8    &kp F9  &kp F10    &kp F11    &kp F12
+                                                                     &trans  &trans  &trans       &trans  &trans  &trans
       >;
     };
 
