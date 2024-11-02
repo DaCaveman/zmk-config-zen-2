@@ -28,7 +28,15 @@
       then-layer = <5>;
     };
   };
-
+  macros {
+    FirstLet: FirstLet{
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+      = <&macro_tap &kp DE_CARET &kp SPACE>
+      ;
+    };
+  };
   behaviors {
     td0: td0 {
       compatible = "zmk,behavior-tap-dance";
@@ -72,16 +80,6 @@
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
     };
-  macros {
-    FirstLet: FirstLet{
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings
-      = <&macro_tap &kp DE_CARET &kp SPACE>
-      ;
-    };
-  };
-  };
     hmM: homerow_modsMacro {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
