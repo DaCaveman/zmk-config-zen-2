@@ -93,7 +93,7 @@
                                       // |  ESC |  Q  |  W  |  E  |  R  |  T  |***|  Z  |  U   |  I  |  O  |  P  |  Ü  |
                                       // |  TAB |  A  |  S  |  D  |  F  |  G  |***|  H  |  J   |  K  |  L  |  Ö  |  Ä  | 
                                       // | CRTL |  Y  |  X  |  C  |  V  |  B  |***|  N  |  M   |  ,  |  .  |  -  | WIN |
-                                      //            | DEL | ALT SPACE | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
+                                      //            | DEL | ALT SPACE | 4 SPC |***| 3 ENT | SHIFT SPACE | BSPC |
 
       bindings = <
         &kp ESC    &kp Q        &kp W        &kp E        &kp R        &kp T      &kp DE_Z  &kp U        &kp I         &kp O        &kp P                  &kp DE_U_UMLAUT
@@ -109,7 +109,7 @@
                                                         // |  ESC |  Ü  |  ,  |  .  |  P  |  Y  |***|  F  |  G   |  C  |  T  |  Z  |  ß  |
                                                         // |  TAB |  A  |  O  |  E  |  I  |  U  |***|  H  |  D   |  R  |  N  |  S  |  L  | 
                                                         // |  Ä  |  Ö  |  Q  |  J  |  K  |  X   |***|  B  |  M   |  W  |  V  |  '  | WIN |
-                                                        //       | DEL CTRL | ALT SPACE | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
+                                                        //       | DEL CTRL | ALT SPACE | 4 SPC |***| 3 ENT | SHIFT SPACE | BSPC |
 
       bindings = <
         &kp ESC               &kp DE_U_UMLAUT  &kp DE_COMMA  &kp DE_DOT   &kp P        &kp DE_Y      &kp F  &kp G        &kp C        &kp T        &kp DE_Z     &kp DE_SZ
@@ -121,17 +121,17 @@
     layer_2 {
       display-name = "GAMING";
 
-                // --------------------------------------------------------------------------------
-                // |  ESC |  Q  |  W  |  E  |  R  |  T  |***|  Z  |  U   |  I  |  O  |  P  |  Ü  |
-                // |  TAB |  A  |  S  |  D  |  F  |  G  |***|  H  |  J   |  K  |  L  |  Ö  |  Ä  | 
-                // |   .  |  Y  |  X  |  C  |  V  |  B  |***|  N  |  M   |  ,  |  .  |  -  | WIN |
-                //                 | CRTL | ALT | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
+                      // --------------------------------------------------------------------------------
+                      // |  ESC  |  Q  |  W  |  E  |  R  |  T  |***|  Z  |  U   |  I  |  O  |  P  |  Ü  |
+                      // |  TAB  |  A  |  S  |  D  |  F  |  G  |***|  H  |  J   |  K  |  L  |  Ö  |  Ä  | 
+                      // | SHIFT |  Y  |  X  |  C  |  V  |  B  |***|  N  |  M   |  ,  |  .  |  -  | WIN |
+                      //                    | CRTL | ALT | SPC |***| 3 ENT | SHIFT SPACE | 4 BSPC |
 
       bindings = <
-        &kp ESC    &kp Q     &kp W  &kp E  &kp R  &kp T       &kp DE_Z  &kp U  &kp I         &kp O       &kp P            &kp DE_U_UMLAUT
-        &kp TAB    &kp A     &kp S  &kp D  &kp F  &kp G       &kp H     &kp J  &kp K         &kp L       &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
-        &kp DOT    &kp DE_Y  &kp X  &kp C  &kp V  &kp B       &kp N     &kp M  &kp DE_COMMA  &kp DE_DOT  &kp DE_MINUS     &kp RGUI
-                            &kp LCTRL  &kp LALT  &trans       &trans  &trans  &trans
+        &kp ESC         &kp Q     &kp W  &kp E  &kp R  &kp T       &kp DE_Z  &kp U  &kp I         &kp O       &kp P            &kp DE_U_UMLAUT
+        &kp TAB         &kp A     &kp S  &kp D  &kp F  &kp G       &kp H     &kp J  &kp K         &kp L       &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
+        &kp LEFT_SHIFT  &kp DE_Y  &kp X  &kp C  &kp V  &kp B       &kp N     &kp M  &kp DE_COMMA  &kp DE_DOT  &kp DE_MINUS     &kp RGUI
+                              &kp LCTRL  &kp LALT  &kp SPACE       &trans  &trans  &lt 4 BSPC
       >;
     };
     layer_3 {
@@ -141,13 +141,13 @@
                                                       // |  ESC |  1  |  2  |  3  |  4  |  5  |***|   6  |  7  |  8  |  9  |   0   |       |
                                                       // | TAB  |  0  |  ^  |     |  '  |  $  |***|  LFT | DWN |  UP | RGT | PG_DN | PG_UP |
                                                       // |  F1  | F2  | F3  | F4  | F5  | F6  |***|  F7  | F8  | F9  | F10 |  F11  |  F12  |
-                                                      //            | DEL | ALT SPACE | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
+                                                      //            | DEL | ALT SPACE | 4 SPC |***| 3 ENT | SHIFT SPACE | BSPC |
 
       bindings = <
         &trans  &kp N1       &kp N2              &kp N3         &kp N4           &kp N5             &kp N6    &kp N7    &kp N8  &kp N9     &kp N0     &none
         &trans  &hm LGUI N0  &hmM LALT &FirstLet  &hm LSFT DE_AT &hm LCTL DE_SQT  &kp DE_DLLR       &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp PG_DN  &kp PG_UP
         &kp F1  &kp F2       &kp F3              &kp F4         &kp F5           &kp F6             &kp F7    &kp F8    &kp F9  &kp F10    &kp F11    &kp F12
-                                                                       &trans  &trans  &trans       &trans  &trans  &trans
+                                                                       &trans  &trans  &SPACE       &trans  &trans  &trans
       >;
     };
 
@@ -158,7 +158,7 @@
                                                         // |  ESC |  !  |  "' |  #  |  % |  &  |***|  ?  |  [  |  ]  |  =  | "|" |  ß |
                                                         // | TAB |    |  ^  |  §  |  @  |  $  |***|  /  |  (  |  )  |  \  | `´  |  _  |
                                                         // | CRTL |  <  | >  |  €  |  +  |  -  |***|  *  |  {  |  }  | ²³µ |  °  | ~  |
-                                                        //           | DEL | ALT SPACE | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
+                                                        //           | DEL | ALT SPACE | 4 SPC |***| 3 ENT | SHIFT SPACE | BSPC |
 
       bindings = <
         &trans  &kp DE_EXCL  &td1               &kp DE_HASH       &kp DE_PRCNT    &kp DE_AMPS        &kp DE_QMARK  &kp DE_LBKT       &kp DE_RBKT       &kp DE_EQUAL      &kp DE_PIPE  &kp DE_SZ
@@ -175,7 +175,7 @@
                                           // | reset |     |     |     |    |Lay0|***|Lay1     |  Lay2   |    |    |            | reset      |
                                           // | BT0   | BT1 | BT2 | BT3 |    |    |***|         |         |    |    | BT CLR CUR | BT CLR ALL |
                                           // | boot  |     |     |     |    |    |***| OUT TOG |         |    |    |            | boot       |
-                                          //           | DEL | ALT SPACE | 2 SPC |***| 1 ENT | SHIFT SPACE | BSPC |
+                                          //           | DEL | ALT SPACE | 4 SPC |***| 3 ENT | SHIFT SPACE | BSPC |
 
       bindings = <
         &sys_reset       &none         &none         &none      &none     &to 0       &to 1     &to 2      &none  &none     &none     &sys_reset
