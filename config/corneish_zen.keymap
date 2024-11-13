@@ -19,7 +19,9 @@
     // zmk,matrix_transform = &five_column_transform;
   };
 };
-  &soft_off { hold-time-ms = <5000>; // Only turn off if the key is held for 5 seconds or longer. };
+  &soft_off { 
+    hold-time-ms = <5000>; // Only turn off if the key is held for 5 seconds or longer. 
+  };
 / {
   conditional_layers {
     compatible = "zmk,conditional-layers";
