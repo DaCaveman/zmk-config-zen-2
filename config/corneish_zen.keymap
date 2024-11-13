@@ -20,6 +20,9 @@
   };
 };
 
+&soft_off {
+  hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
+};
 / {
   conditional_layers {
     compatible = "zmk,conditional-layers";
@@ -80,9 +83,6 @@
       quick-tap-ms = <0>;
       flavor = "tap-preferred";
       bindings = <&kp>, <&FirstLet>;
-    };
-    &soft_off {
-      hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
     };
   };
   keymap {
