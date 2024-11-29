@@ -201,7 +201,7 @@
                             //           | DEL | ALT SPACE | 4 SPC |***| 3 ENT | SHIFT SPACE | BSPC |
 
       bindings = <
-        &sys_reset   &kp M   &trans  &trans  &trans  &bt BT_SEL 0       &trans  &trans  &trans  &trans  &trans  &trans
+        &sys_reset   &kp M   &trans  &trans  &bt BT_CLR_ALL  &bt BT_SEL 0       &trans  &trans  &trans  &trans  &trans  &trans
         &trans       &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
         &bootloader  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5             &trans  &trans  &trans  &trans  &trans  &trans
                                            &trans  &trans  &trans       &trans  &trans  &trans
