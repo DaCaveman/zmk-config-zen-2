@@ -23,8 +23,9 @@
     hold-time-ms = <5000>; // Only turn off if the key is held for 5 seconds or longer. 
   };
   &lt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <250>;
     flavor = "tap-preferred";
+    quick-tap-ms = <0>;
   };
 / {
   conditional_layers {
