@@ -95,17 +95,17 @@
     default_layer {
       display-name = "QWERTZ";
 
-                    // --------------------------------------------------------------------------------
-                    // |  ESC |  Q  |  W  |  E  |  R  |  T  |***|  Z  |  U   |  I  |  O  |  P  |  Ü  |
-                    // |  TAB |  A  |  S  |  D  |  F  |  G  |***|  H  |  J   |  K  |  L  |  Ö  |  Ä  | 
-                    // | CRTL |  Y  |  X  |  C  |  V  |  B  |***|  N  |  M   |  ,  |  .  |  -  | WIN |
-                    //            | DEL | ALT SPACE | 4 SPC |***| 3 ENT | SHIFT SPACE | BSPC |
+                                              // --------------------------------------------------------------------------------
+                                              // |  ESC |  Q  |  W  |  E  |  R  |  T  |***|  Z  |  U   |  I  |  O  |  P  |  Ü  |
+                                              // |  TAB |  A  |  S  |  D  |  F  |  G  |***|  H  |  J   |  K  |  L  |  Ö  |  Ä  | 
+                                              // | CRTL |  Y  |  X  |  C  |  V  |  B  |***|  N  |  M   |  ,  |  .  |  -  | WIN |
+                                              //            | DEL | ALT SPACE | 4 SPC |***| 3 ENT | SHIFT SPACE | BSPC |
 
       bindings = <
-        &kp ESC         &kp Q     &kp W  &kp E  &kp R  &kp T      &kp DE_Z   &kp U       &kp I         &kp O       &kp P                  &kp DE_U_UMLAUT
-        &lt 6 TAB       &kp A     &kp S  &kp D  &kp F  &kp G      &kp H      &hm RCTL J  &hm RSFT K    &hm RALT L  &hm RGUI DE_O_UMLAUT   &kp DE_A_UMLAUT
-        &kp LEFT_SHIFT  &kp DE_Y  &kp X  &kp C  &kp V  &kp B      &kp N      &kp M       &kp DE_COMMA  &kp DE_DOT  &kp DE_MINUS           &kp RGUI
-                              &kp LCTRL  &kp LALT  &kp SPACE      &lt 3 ENTER  &hm LEFT_SHIFT SPACE &lt 4 BSPC
+        &kp ESC    &kp Q        &kp W        &kp E        &kp R        &kp T      &kp DE_Z  &kp U        &kp I         &kp O        &kp P                  &kp DE_U_UMLAUT
+                  &kp TAB    &hm LGUI A   &hm LALT S   &hm LSFT D   &hm LCTL F   &kp G      &kp H     &hm RCTL J   &hm RSFT K    &hm RALT L   &hm RGUI DE_O_UMLAUT   &kp DE_A_UMLAUT
+                  &sk LCTRL  &kp DE_Y     &kp X        &kp C        &kp V        &kp B      &kp N     &kp M        &kp DE_COMMA  &kp DE_DOT   &kp DE_MINUS           &kp RGUI
+                                                   &kp DEL  &hm LALT SPACE &lt 4 SPACE      &lt 3 ENTER  &hm LEFT_SHIFT SPACE &kp BSPC
       >;
     };
     layer_1 {
@@ -194,17 +194,17 @@
     layer_6 {
       display-name = "GamingSecond";
 
-                            // -----------------------------------------------------------------------------------------
-                            // | reset |     |     |     |    |Lay0|***|Lay1     |  Lay2   |    |    |            | reset      |
-                            // | BT0   | BT1 | BT2 | BT3 |    |    |***|         |         |    |    | BT CLR CUR | BT CLR ALL |
-                            // | boot  |     |     |     |    |    |***| OUT TOG |         |    |    |            | boot       |
-                            //           | DEL | ALT SPACE | 4 SPC |***| 3 ENT | SHIFT SPACE | BSPC |
+                // -----------------------------------------------------------------------------------------
+                // | reset |     |     |     |    |Lay0|***|Lay1     |  Lay2   |    |    |            | reset      |
+                // | BT0   | BT1 | BT2 | BT3 |    |    |***|         |         |    |    | BT CLR CUR | BT CLR ALL |
+                // | boot  |     |     |     |    |    |***| OUT TOG |         |    |    |            | boot       |
+                //           | DEL | ALT SPACE | 4 SPC |***| 3 ENT | SHIFT SPACE | BSPC |
 
       bindings = <
-        &sys_reset   &kp M   &trans  &trans  &bt BT_CLR_ALL  &bt BT_SEL 0       &trans  &trans  &trans  &trans  &trans  &trans
-        &trans       &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
-        &bootloader  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5             &trans  &trans  &trans  &trans  &trans  &trans
-                                           &trans  &trans  &trans       &trans  &trans  &trans
+        &trans  &kp M   &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5       &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans       &trans  &trans  &trans
       >;
     };
   };
